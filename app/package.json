@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:prod": "npm ci && vite build",
+    "build:prod": "npm ci && vite build && cp -r ./dist/* /var/www/my-website.site /html",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "server": "json-server -p3001 --watch db.json"
