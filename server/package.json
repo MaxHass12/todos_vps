@@ -8,6 +8,8 @@
     "dev": "NODE_ENV=development PORT=3000 nodemon index.js",
     "start": "NODE_ENV=production node index.js",
     "restart-pm2": "pm2 restart notes_vps",
+    "build:frontend": "cd ../app && npm run build:prod",
+    "build:prod": "npm run build:frontend && cp -r ../app/dist . && npm ci",
     "lint": "eslint ."
   },
   "author": "",
