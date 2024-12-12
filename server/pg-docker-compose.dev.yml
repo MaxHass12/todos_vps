@@ -1,0 +1,19 @@
+services:
+  db:
+    image: postgres_16
+    build:
+      # context: .
+      dockerfile: ./pgDev.Dockerfile
+    container_name: postgres_db_notes_vps
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: postgres
+      EDITOR: vim
+    ports:
+      - '15432:5432'
+    volumes:
+      - pg_db_data_notes_vps:/var/lib/postgresql/data
+
+volumes:
+  pg_db_data_notes_vps:
