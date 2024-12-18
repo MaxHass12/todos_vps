@@ -6,8 +6,6 @@ const utc = require('dayjs/plugin/utc');
 const timezone = require('dayjs/plugin/timezone');
 const Log = require('../models/log');
 
-console.log('Log', Log);
-
 // Extend dayjs with the plugins
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -28,7 +26,7 @@ const logsRecorder = (req, res, next) => {
       const body = req.body ? JSON.stringify(req.body) : '';
       const request = `${requestStartTime.format('YYYY/MMM/DD-HH:mm:ss')} ${
         req.ip
-      } ${req.method} ${req.url} ${body}`;
+      } ${req.method} ${req.originalUrl} ${body}`;
 
       const statusCode = res.statusCode;
       const statusText = getReasonPhrase(statusCode);

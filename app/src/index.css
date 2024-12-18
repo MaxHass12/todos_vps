@@ -18,3 +18,46 @@ h1 {
   padding: 10px;
   margin-bottom: 10px;
 }
+
+.table-container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.styled-table {
+  border-collapse: collapse;
+  width: 80%;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.styled-table th,
+.styled-table td {
+  text-align: left;
+  padding: 12px 15px;
+}
+
+.styled-table thead {
+  background-color: #4caf50;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.styled-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.styled-table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.styled-table tbody td {
+  border-bottom: 1px solid #ddd;
+}
